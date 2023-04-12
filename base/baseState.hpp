@@ -10,9 +10,7 @@ enum TaskRC
 
 struct BaseState
 {
-    BaseState() {};
-    virtual ~BaseState() {};
-    virtual TaskRC execute() {};
+    virtual TaskRC execute() = 0;
 };
 
 #endif
