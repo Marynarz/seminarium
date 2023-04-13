@@ -1,12 +1,13 @@
 #include <iostream>
 #include "states/loginState.hpp"
-#include "base/baseWorkflow.hpp"
+#include "workflow/loginWorkflow.hpp"
+#include "database/database.hpp"
 
 int main()
 {
     std::cout <<"--- SEMINARIUM WORKFLOW ---" <<std::endl;
-    BaseWorkflow<BaseState> workflow1 {"login_workflow"};
-    workflow1.add(new LoginState());
-    workflow1.execute();
+    Database::get_instance()->insert("Wojtek", "password");
+    LoginWorkflow lw1;
+    lw1.execute();
     return 0;
 }

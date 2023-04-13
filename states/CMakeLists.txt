@@ -1,1 +1,1 @@
-add_library(states_lib loginState.hpp)
+add_library(states_lib loginState.hpp insertUsernameState.hpp authenticateState.hpp)

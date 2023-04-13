@@ -7,6 +7,7 @@ struct User
 {
     std::string name;
     std::string pass;
+    bool authenticate = false;
 };
 
 #endif

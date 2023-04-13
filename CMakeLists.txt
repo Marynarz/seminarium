@@ -19,3 +19,13 @@ add_subdirectory(states)
 
 set_target_properties(states_lib PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(workflow_seminarium PUBLIC states_lib)
+
+add_subdirectory(workflow)
+
+set_target_properties(workflow_lib PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries(workflow_seminarium PUBLIC workflow_lib)
+
+add_subdirectory(database)
+
+set_target_properties(database_lib PROPERTIES LINKER_LANGUAGE CXX)
+target_link_libraries(workflow_seminarium PUBLIC database_lib)
