@@ -4,9 +4,9 @@ Database *Database::instance = nullptr;
 
 Database *Database::get_instance()
 {
-    if(!instance)
+    if (!instance)
         instance = new Database();
-    
+
     return instance;
 }
 
@@ -23,13 +23,13 @@ bool Database::authenticate(const std::string &name, const std::string &pass)
     }
     catch (const std::out_of_range &e)
     {
-        std::cout << "[DATABASE]: User not exist";
+        std::cout << "[DATABASE]: User not exist" << std::endl;
         return false;
     }
 
     if (database[name] != pass)
     {
-        std::cout << "[DATABASE]: Password failed";
+        std::cout << "[DATABASE]: Password failed" << std::endl;
         return false;
     }
 

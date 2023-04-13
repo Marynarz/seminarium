@@ -35,7 +35,7 @@ public:
         catch (const std::exception &e)
         {
             std::cout << "[EXCEPTION]: " << e.what() << std::endl;
-            std::cout << "[FAIL]: workflow {" <<workflow_name <<"} failed.";
+            std::cout << "[FAIL]: workflow {" << workflow_name << "} failed." << std::cout;
         }
     }
 };

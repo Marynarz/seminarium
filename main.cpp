@@ -5,7 +5,7 @@
 
 int main()
 {
-    std::cout <<"--- SEMINARIUM WORKFLOW ---" <<std::endl;
+    std::cout << "--- SEMINARIUM WORKFLOW ---" << std::endl;
     Database::get_instance()->insert("Wojtek", "password");
     LoginWorkflow lw1;
     lw1.execute();
