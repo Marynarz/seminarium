@@ -6,6 +6,7 @@
 template <typename T>
 class BaseWorkflow
 {
+protected:
     std::list<T *> states_list;
     std::string workflow_name;
 
@@ -23,7 +24,7 @@ public:
 
     virtual void execute()
     {
-        std::cout << "[START]: workflow:\t" <<workflow_name <<std::endl;
+        std::cout << "[START]: workflow:\t" << workflow_name << std::endl;
         try
         {
             for (const auto i : states_list)
@@ -31,9 +32,10 @@ public:
                 i->execute();
             }
         }
-        catch(std::exception e)
+        catch (const std::exception &e)
         {
             std::cout << "[EXCEPTION]: " << e.what() << std::endl;
+            std::cout << "[FAIL]: workflow {" <<workflow_name <<"} failed.";
         }
     }
 };
