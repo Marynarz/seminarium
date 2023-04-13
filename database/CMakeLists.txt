@@ -1,0 +1,1 @@
+add_library(database_lib database.cpp)
