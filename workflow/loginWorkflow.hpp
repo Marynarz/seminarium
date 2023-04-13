@@ -17,6 +17,8 @@ class LoginWorkflow : protected BaseWorkflow<BaseState>
 public:
     LoginWorkflow() : BaseWorkflow<BaseState>("LoginWorkflow")
     {
+        user.reset(new User());
+
         add(new LoginState());
         add(new InsertUsernameState(user));
         add(new AuthenticateState(user));
@@ -24,8 +26,13 @@ public:
     }
     void execute()
     {
-        user.reset(new User());
         BaseWorkflow<BaseState>::execute();
+    }
+    void reset_user()
+    {
+        user->name = "";
+        user->pass = "";
+        user->authenticate = false;
     }
 };
 
