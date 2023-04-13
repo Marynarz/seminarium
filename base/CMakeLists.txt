@@ -1,1 +1,1 @@
-add_library(base_lib baseState.hpp)
+add_library(base_lib baseState.hpp baseWorkflow.hpp)
