@@ -18,12 +18,12 @@ class InsertUsernameState : public BaseState
 
     TaskRC execute()
     {
-        std::cout <<"\n--- LOGIN ---\nUser:\t";
+        std::cout <<"\n--- LOGIN ---\nUser:\t\t";
         std::cin >>user->name;
         std::cout <<"\nPassword:\t";
         std::cin >>user->pass;
         std::cout <<"\n-------------" <<std::endl;
-        
+
         return TaskRC::Success;
     }
 };
