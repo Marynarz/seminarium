@@ -16,6 +16,8 @@ public:
     {
         for (auto i : states_list)
             delete i;
+        
+        states_list.clear();
     }
     virtual void add(T *new_element)
     {

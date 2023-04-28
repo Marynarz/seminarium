@@ -46,5 +46,6 @@
         "stdexcept": "cpp",
         "streambuf": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+    "cmake.configureSettings": { "gtest_build_samples": "ON" }
 }

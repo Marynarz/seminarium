@@ -11,7 +11,7 @@ class Database
     static Database *instance;
     Database(){};
     std::map<std::string, std::string> database;
-
+    
 public:
     Database(const Database &) = delete;
     Database(const Database &&) = delete;
